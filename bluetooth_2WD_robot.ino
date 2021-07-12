@@ -143,16 +143,16 @@ Serial.println("Backward");
 incomingByte = 'DEC';
 }
 break;
-case 'I':
+case 'R':
 {
-turnRightF(1);
+turnRight(1);
 Serial.println("turn Right");
 //lcd.setCursor(5,19);
 //lcd.println("Turning Right");
 incomingByte = 'DEC';
 }
 break;
-case 'G':
+case 'L':
 {
 turnLeft(1);
 Serial.println("turn Left");
@@ -230,13 +230,4 @@ digitalWrite(light_FR, LOW);
 digitalWrite(light_FL, LOW);
 delay(time);
 }
-void turnRightF(int time)
-{
-  digitalWrite(MB2, LOW);
-  digitalWrite(MB1, HIGH);
-  analogWrite(PWM_B, speedCar);
-  digitalWrite(MA2, LOW);
-  digitalWrite(MA1, HIGH);
-  analogWrite(PWM_A, speedCar);
-  delay(time);
-}
+
